@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midnight Cavern - Concept</title>
     <link
       rel="stylesheet"
@@ -15,113 +17,118 @@
     <link rel="manifest" href="assets/image/site.webmanifest">
     <link rel="mask-icon" href="assets/image/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#151627">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="js/main.js"></script>
   </head>
   <body>
     <div id="navbar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="/index.html">Midnight Cavern</a>
+          <a href="index.html">Midnight Cavern</a>
         </li>
         <li class="nav-item">
-          <a href="/index.html">Home</a>
+          <a href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/concept.html">Concept</a>
+          <a href="concept.html">Concept</a>
         </li>
         <li class="nav-item">
-          <a href="/demo.html">Live Demo</a>
+          <a href="demo.html">Live Demo</a>
         </li>
-        <!--<li class="nav-item">
-          <a href="/about.html">About</a>
-        </li>-->
         <li class="nav-item">
           <a href="https://github.com/MidnightCavern/Midnight-Cavern-Unity">GitHub Repo</a>
         </li>
       </ul>
     </div>
     <section class="headerpanel">
-			<div class="video-container">
-				<video src="assets/video/concept.mp4" autoplay muted loop></video>
-			</div>
-			<div class="content">
-				<h1>Concept Features</h1>
-				<a href="#here" class="btn">Read More</a>
-			</div>
-		</section>
+      <div class="video-container">
+        <video src="assets/video/concept.mp4" autoplay muted loop></video>
+      </div>
+      <div class="content">
+        <h1>Concept Features</h1>
+        <p class="hero-subtitle">A glimpse into what makes Midnight Cavern tick</p>
+        <a href="#features" class="btn btn-primary">Explore Features</a>
+      </div>
+    </section>
     <main class="container">
-      <section id="here" class="card">
-        <img src="https://img.itch.zone/aW1hZ2UvNjAzNDgwLzMyMDA5MTYucG5n/original/40Zk2Z.png" alt="" />
+      <div id="features" class="section-intro fade-in">
+        <h2>What Awaits You</h2>
+        <p>Midnight Cavern blends dungeon crawling, boss encounters, and deep RPG systems into one dark, retro adventure.</p>
+      </div>
+      <section class="card fade-in">
+        <img src="https://img.itch.zone/aW1hZ2UvNjAzNDgwLzMyMDA5MTYucG5n/original/40Zk2Z.png" alt="The Ruined Cavern" />
         <div>
+          <span class="card-label"><i class="fas fa-dungeon"></i> Exploration</span>
           <h3>The Ruined Cavern</h3>
           <p>
-            Midnight Cavern's main point point is to explore and raid caverns/dungeons.  
-            The game will feature a 1st cavern to battle and explore at the spawn section.
-            It'll plan to look dark, gritty, and have ancient lookin' structures.
-            Each Cavern will always have a main purpose of completing, for example, you can find relics or ancient artifacts that can be sold for a hefty price. 
-            Not to mention, each cavern will also include a boss. Remember, not all bosses are evil!  
+            Dive deep into dark, crumbling dungeons filled with ancient structures and hidden secrets.
+            Each cavern holds a unique purpose — recover lost relics, uncover ancient artifacts, and sell them for a hefty price.
+            But every cavern is also guarded by a boss. And not all of them are hostile — some might even have a story to tell.
           </p>
         </div>
       </section>
-      <section class="card" data-aos="fade-left">
-        <img src="https://img.itch.zone/aW1hZ2UvODM4MDk1LzQ2OTc3ODYuZ2lm/347x500/ZQ6Opu.gif" alt="" />
+      <section class="card fade-in">
+        <img src="https://img.itch.zone/aW1hZ2UvODM4MDk1LzQ2OTc3ODYuZ2lm/347x500/ZQ6Opu.gif" alt="Cavern Bosses" />
         <div>
+          <span class="card-label"><i class="fas fa-skull-crossbones"></i> Boss Fights</span>
           <h3>Cavern Bosses</h3>
           <p>
-            Midnight Cavern will include a boss for each cavern.
-            Each boss will always be different for each cavern.
-            Meaning some might be stronger, some might be weaker, some might be strong in defence but low in attack damage.
-            There's also gonna be a option to chat with them first.
-            A dialogue option will appear to chat with the boss itself. There will be different ways to approach each one. 
-            But remember this, each choice of dialogue will effect your player's rep. 
+            Every cavern is ruled by a unique boss with distinct strengths, weaknesses, and personality.
+            Some hit hard, some are nearly unbreakable — and some are open to conversation before the fight begins.
+            A dialogue system lets you approach each encounter your way, but choose carefully: every decision shapes your reputation.
           </p>
         </div>
       </section>
-      <section class="card" data-aos="fade-right">
-        <img src="https://img.itch.zone/aW1hZ2UvNzYyMDkxLzUyMTQxNTIucG5n/347x500/KRDY0t.png" alt="" />
+      <section class="card fade-in">
+        <img src="https://img.itch.zone/aW1hZ2UvNzYyMDkxLzUyMTQxNTIucG5n/347x500/KRDY0t.png" alt="Inventory System" />
         <div>
-          <h3>Simple Inventory System</h3>
+          <span class="card-label"><i class="fas fa-box-open"></i> Inventory</span>
+          <h3>Intuitive Inventory</h3>
           <p>
-            Midnight Cavern's simple to use Inventory system will be one of the main features.
-            It'll be designed to be used in every setting of the game, sometimes you may want to swap your armor to a different one in battles.
-            Not only that, but there's gonna be shortcuts when you want to swap or equipt an item.
+            A clean, responsive inventory system built for quick access in any situation.
+            Swap armor mid-battle, equip items on the fly, and use shortcuts to keep the action flowing.
+            Designed to feel fast and natural — so you spend less time in menus and more time exploring.
           </p>
         </div>
       </section>
-      <section class="card" data-aos="fade-left">
-        <img src="https://img.itch.zone/aW1hZ2UvMTA2ODc5Mi82MTIxNTU1LnBuZw==/original/WGWJZs.png" alt="" />
+      <section class="card fade-in">
+        <img src="https://img.itch.zone/aW1hZ2UvMTA2ODc5Mi82MTIxNTU1LnBuZw==/original/WGWJZs.png" alt="RPG Combat" />
         <div>
+          <span class="card-label"><i class="fas fa-fire"></i> Combat</span>
           <h3>RPG Roguelike Combat</h3>
           <p>
-            Midnight Cavern will deeply include a very comfortable & satisfying combat mechanic system.
-            Meaning every move & animation & buff will always bring a satisfying mechanic just for the player.
-            The game will also include a very customzed & detailed skill tree. This will bring customization at It's finest. 
-            Currently There'll be only three main classes to choose from, Archer, Knight, Mage. More will come at the future.
+            Every swing, spell, and buff is designed to feel satisfying and impactful.
+            A deep skill tree lets you specialize your playstyle across three core classes: Archer, Knight, and Mage.
+            Master your build, chain abilities together, and take on increasingly dangerous foes. More classes are planned for the future.
           </p>
         </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="containerfooter">
         <div>
-          <h1>Midnight Cavern (CavernWeb)</h1>
-          <p>Copyright &copy; 2019 - 2021 All Rights Reserved<br>
-          Website & Game Developed by KayTwenty</p>
+          <h1>Midnight Cavern</h1>
+          <p>Copyright &copy; 2020 - 2026 All Rights Reserved<br>
+          Made by <a href="https://antton.ca" target="_blank" rel="noopener noreferrer">Anton</a></p>
         </div>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="concept.html">Concept</a></li>
             <li><a href="demo.html">Live Demo</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="https://github.com/KayTwenty/Midnight-Cavern-Unity">GitHub Repo</a></li>
+            <li><a href="https://github.com/MidnightCavern/Midnight-Cavern-Unity">GitHub Repo</a></li>
           </ul>
         </nav>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>

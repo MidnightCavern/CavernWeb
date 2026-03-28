@@ -1,17 +1,42 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', () => {
+  // Sticky navbar background on scroll
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
 
-    //Init ScrollMagic
-    var controller = new ScrollMagic.Controller();
+  // Mobile hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navList.classList.toggle('open');
+    });
 
-    //Build a scene
-    var ourScene = new ScrollMagic.Scene({
+    // Close menu when a link is clicked
+    navList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navList.classList.remove('open');
+      });
+    });
+  }
 
-    })
-    .setClassToggle('')
-});
+  // Fade-in on scroll (intersection observer)
+  const faders = document.querySelectorAll('.fade-in');
+  if (faders.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
 
-AOS.init({
-    offset: 400, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 1000 // values from 0 to 3000, with step 50ms
+    faders.forEach(el => observer.observe(el));
+  }
 });

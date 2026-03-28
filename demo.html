@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midnight Cavern - Demo</title>
     <link rel="shortcut icon" href="game/TemplateData/favicon.ico">
     <link rel="stylesheet" href="game/TemplateData/style.css">
-    <link rel="stylesheet" href="css/style.css">
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="apple-touch-icon" sizes="120x120" href="assets/image/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon-32x32.png">
@@ -15,7 +19,7 @@
     <link rel="manifest" href="assets/image/site.webmanifest">
     <link rel="mask-icon" href="assets/image/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#151627">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -31,36 +35,103 @@
     </script>
   </head>
   <body>
-    <navbar>
+    <div id="navbar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="/index.html">Midnight Cavern</a>
+          <a href="index.html">Midnight Cavern</a>
         </li>
         <li class="nav-item">
-          <a href="/index.html">Home</a>
+          <a href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/concept.html">Concept</a>
+          <a href="concept.html">Concept</a>
         </li>
         <li class="nav-item">
-          <a href="/demo.html">Live Demo</a>
+          <a href="demo.html">Live Demo</a>
         </li>
-        <!--<li class="nav-item">
-          <a href="/about.html">About</a>
-        </li>-->
         <li class="nav-item">
           <a href="https://github.com/MidnightCavern/Midnight-Cavern-Unity">GitHub Repo</a>
         </li>
       </ul>
-    </navbar>
-    <br />
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="glfooter">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">Midnight Cavern Controls: WASD & Arrow Keys | Fullscreen Recommended</div>
-      </div>
     </div>
+    <section class="demo-section">
+      <h2>Live Demo</h2>
+      <p class="demo-subtitle">Play Midnight Cavern directly in your browser</p>
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="glfooter">
+          <div class="title">Midnight Cavern</div>
+          <button class="btn-fullscreen" onclick="unityInstance.SetFullscreen(1)"><i class="fas fa-expand"></i> Fullscreen</button>
+        </div>
+      </div>
+      <div class="controls-panel">
+        <h3>Controls</h3>
+        <div class="controls-row">
+          <div class="control-group">
+            <div class="key-cluster">
+              <div class="key-row">
+                <kbd>W</kbd>
+              </div>
+              <div class="key-row">
+                <kbd>A</kbd>
+                <kbd>S</kbd>
+                <kbd>D</kbd>
+              </div>
+            </div>
+            <span class="control-label">Move</span>
+          </div>
+          <div class="control-divider"></div>
+          <div class="control-group">
+            <div class="key-cluster">
+              <div class="key-row">
+                <kbd class="key-arrow">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 3l5 7H3z"/></svg>
+                </kbd>
+              </div>
+              <div class="key-row">
+                <kbd class="key-arrow">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M3 5l7 5V0z" transform="rotate(90 8 8)"/></svg>
+                </kbd>
+                <kbd class="key-arrow">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 13l5-7H3z"/></svg>
+                </kbd>
+                <kbd class="key-arrow">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M13 5L6 0v10z" transform="rotate(90 8 8)"/></svg>
+                </kbd>
+              </div>
+            </div>
+            <span class="control-label">Move</span>
+          </div>
+          <div class="control-divider"></div>
+          <div class="control-group">
+            <kbd class="key-wide"><i class="fas fa-expand-arrows-alt"></i></kbd>
+            <span class="control-label">Fullscreen recommended</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="containerfooter">
+        <div>
+          <h1>Midnight Cavern</h1>
+          <p>Copyright &copy; 2020 - 2026 All Rights Reserved<br>
+          Made by <a href="https://antton.ca" target="_blank" rel="noopener noreferrer">Anton</a></p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="concept.html">Concept</a></li>
+            <li><a href="demo.html">Live Demo</a></li>
+            <li><a href="https://github.com/MidnightCavern/Midnight-Cavern-Unity">GitHub Repo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
